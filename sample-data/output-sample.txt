@@ -1,0 +1,76 @@
+PS> .\New-BulkUsers.ps1 -CsvPath .\sample-data\users-sample.csv
+
+[08:14:02] [INFO] Loaded 10 users from .\sample-data\users-sample.csv
+[08:14:03] [OK]   Created: ipetrov (Ivan Petrov)
+[08:14:03] [OK]   Created: mkuznetsova (Maria Kuznetsova)
+[08:14:04] [OK]   Created: dvolkov (Dmitry Volkov)
+[08:14:04] [OK]   Created: esorokina (Elena Sorokina)
+[08:14:05] [OK]   Created: amorozov (Alexei Morozov)
+[08:14:05] [OK]   Created: nfedorova (Natalia Fedorova)
+[08:14:06] [OK]   Created: spopov (Sergei Popov)
+[08:14:06] [OK]   Created: onovikova (Olga Novikova)
+[08:14:07] [OK]   Created: pkozlov (Pavel Kozlov)
+[08:14:07] [OK]   Created: torlova (Tatiana Orlova)
+[08:14:07] [INFO] Log saved: .\logs\bulk-users-20240923_081402.csv
+
+============================================
+ Bulk user creation complete
+ Total   : 10
+ Created : 10
+ Skipped : 0
+ Failed  : 0
+ Time    : 5.2 seconds
+============================================
+
+--- 100-user benchmark (separate run) ---
+ Total   : 100
+ Created : 100
+ Skipped : 0
+ Failed  : 0
+ Time    : 48.7 seconds
+============================================
+
+
+PS> .\Get-ADHealthReport.ps1 -Open
+
+Collecting AD data...
+Data collected in 3.1s
+[OK] Report saved: .\reports\ad-health-20240923_082201.html
+
+============================================
+ AD Health Report
+ Domain  : contoso.local
+ Users   : 214 enabled, 38 disabled
+ Locked  : 2
+ Inactive: 17 (>90d)
+ Report  : .\reports\ad-health-20240923_082201.html
+============================================
+
+
+PS> .\Backup-GPOs.ps1
+
+[INFO] Session: .\gpo-backups\GPO-Backup-20240923_082500
+[INFO] Found 12 GPOs
+  [OK] Default Domain Controllers Policy
+  [OK] Default Domain Policy
+  [OK] Desktop Lockout Policy
+  [OK] Drive Mapping – Finance
+  [OK] Drive Mapping – IT
+  [OK] IT Security Baseline
+  [OK] Password Policy – Strict
+  [OK] Proxy Settings – All Users
+  [OK] Remote Desktop Policy
+  [OK] Screensaver Policy
+  [OK] Software Restriction – Finance
+  [OK] Windows Update Policy
+[INFO] Manifest: .\gpo-backups\GPO-Backup-20240923_082500\manifest.csv
+[INFO] No sessions to rotate
+
+============================================
+ GPO Backup complete
+ Total   : 12
+ Success : 12
+ Failed  : 0
+ Time    : 6.8 seconds
+ Session : .\gpo-backups\GPO-Backup-20240923_082500
+============================================

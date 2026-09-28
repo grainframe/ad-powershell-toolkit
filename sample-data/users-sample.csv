@@ -1,0 +1,11 @@
+FirstName,LastName,Department,Title,OU,Manager,Groups
+Ivan,Petrov,IT,System Administrator,"OU=IT,OU=Staff,DC=contoso,DC=local",a.sidorov,IT-Staff;VPN-Users
+Maria,Kuznetsova,Finance,Accountant,"OU=Finance,OU=Staff,DC=contoso,DC=local",n.sokolova,Finance-Staff
+Dmitry,Volkov,IT,Network Engineer,"OU=IT,OU=Staff,DC=contoso,DC=local",a.sidorov,IT-Staff;VPN-Users;Network-Ops
+Elena,Sorokina,HR,HR Specialist,"OU=HR,OU=Staff,DC=contoso,DC=local",o.morozova,HR-Staff
+Alexei,Morozov,Finance,Senior Accountant,"OU=Finance,OU=Staff,DC=contoso,DC=local",n.sokolova,Finance-Staff
+Natalia,Fedorova,IT,Junior SysAdmin,"OU=IT,OU=Staff,DC=contoso,DC=local",a.sidorov,IT-Staff
+Sergei,Popov,HR,Recruiter,"OU=HR,OU=Staff,DC=contoso,DC=local",o.morozova,HR-Staff
+Olga,Novikova,Finance,Payroll Specialist,"OU=Finance,OU=Staff,DC=contoso,DC=local",n.sokolova,Finance-Staff
+Pavel,Kozlov,IT,DevOps Engineer,"OU=IT,OU=Staff,DC=contoso,DC=local",a.sidorov,IT-Staff;VPN-Users;Dev-Servers
+Tatiana,Orlova,HR,HR Manager,"OU=HR,OU=Staff,DC=contoso,DC=local",,HR-Staff;HR-Managers
