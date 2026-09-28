@@ -2,3 +2,4 @@ logs/
 reports/
 gpo-backups/
 *.csv
+!sample-data/*.csv
